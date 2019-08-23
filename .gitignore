@@ -163,3 +163,8 @@ which
 which.cmd
 window-size
 window-size.cmd
+dist/
+ncu
+ncu.cmd
+npm-check-updates
+npm-check-updates.cmd
