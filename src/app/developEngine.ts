@@ -32,7 +32,7 @@ fs.readdir('./dist/banners/html/', 'utf8', (err:Function , files:Array<String>) 
             let newIndexSrc = indexSrc.replace(regex, templateString);
             //write index-file to dist-FOLDER
             fs.writeFileSync('./dist/app/index.html', newIndexSrc, 'utf8');
-            console.log(`${files[i]} has been saved`)
+            console.log(`${files[i]} has been saved`);
         }
     }
 });

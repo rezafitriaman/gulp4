@@ -17,18 +17,25 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="stylesheet" type="text/css" href="rectStyle.css" />
-	<!-- TODO ADD LEAD AND SKY STYLES  -->
+	<link rel="stylesheet" type="text/css" href="normalize.css" />
 
-	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<!-- TODO ADD LEAD AND SKY STYLES  -->
+	<link rel="stylesheet" type="text/css" href="rectStyle.css" />
+
+	<!-- TODO ADD ENABLE FOR DOUBLECLICK -->
+	<!--<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>-->
+
+	<!--ENABLE FOR ADDFORM-->
+	<script>document.write('<script src="'+ (window.API_URL || 'https://s1.adform.net/banners/scripts/rmb/Adform.DHTML.js?bv='+ Math.random()) +'"><\/script>');</script>
+	<script src="https://s1.adform.net/banners/scripts/components/Adform.DynAdsHelper.js"></script>
 
 </head>
-<body>
+<body class="custom-body">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-custom">
 
-	<nav class="navbar navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">BG.</a>
+	<nav class="navbar navbar-dark bg-nav-custom">
+		<a class="navbar-brand" href="#">DCO-BuildTool</a>
 	</nav>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
