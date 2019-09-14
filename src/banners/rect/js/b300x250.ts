@@ -5,11 +5,12 @@ import {CustomFramework} from "../../framework/framework";
 // todo function animation
 //      function on specific banner
 export class B300x250 extends Rect{
-    constructor(bannerName: string) {
-        super(bannerName);
+    constructor(theBannerName: unknown, theDummyData: unknown) {
+        super(theBannerName, theDummyData);
     }
     color(standardColor = 'green') {
         console.log("chill...");
+        console.log('300x250', this);
         super.color(standardColor);
     }
 }

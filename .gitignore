@@ -90,7 +90,6 @@ dev-ip
 dev-ip.cmd
 gulp
 gulp.cmd
-gulpfile.js
 in-install
 in-install.cmd
 in-publish

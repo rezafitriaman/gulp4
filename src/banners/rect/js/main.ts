@@ -7,34 +7,16 @@ import {CustomFramework} from "../../framework/framework";
 //      start ads
 //
 export class Rect extends CustomFramework{
-    bannerName: string;
-    constructor(theBannerName: string) {
-        super(theBannerName);
+    bannerName: unknown;
+    constructor(theBannerName: unknown, theDummyData: unknown) {
+        super(theBannerName, theDummyData);
         this.bannerName = theBannerName;
     }
     color(standardColor: string = 'transparent') {
         console.log(`${this.bannerName} has ${standardColor} color.`);
         this.greet()
     }
-}
-
-/*class B300x250 extends Rect {
-    constructor(name: string) { super(name); }
-    move(distanceInMeters = 5) {
-        console.log("Slithering...");
-        super.move(distanceInMeters);
-    }
-}*/
-
-/*class B250x250 extends Rect {
-    constructor(name: string) { super(name); }
-    move(distanceInMeters = 45) {
-        console.log("Galloping...");
-        super.move(distanceInMeters);
+    bannerStart() {
+        this.politeInit()
     }
 }
-
-let tom: Animal = new B250x250("Tommy the Palomino");
-
-tom.move(34);*/
-
