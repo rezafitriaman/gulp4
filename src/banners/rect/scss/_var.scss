@@ -1,0 +1,17 @@
+//noinspection ALL
+@font-face {
+	font-family: "PolitieSans-BoldItalic";
+	font-style: normal;
+	font-weight: 600;
+	src: url('PolitieSans-BoldItalic.woff') format("woff");;
+	src: url("PolitieSans-BoldItalic.woff?#iefix") format("woff");
+}
+
+//noinspection ALL
+@font-face {
+	font-family: "PolitieSans-Regular";
+	font-style: normal;
+	font-weight: 300;
+	src: url("PolitieSans-Regular.woff") format("woff");
+	src: url("PolitieSans-Regular.woff?#iefix") format("woff");
+}

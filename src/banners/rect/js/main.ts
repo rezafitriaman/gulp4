@@ -6,7 +6,7 @@ import {CustomFramework} from "../../framework/framework";
 //      show banner or hide
 //      start ads
 //
-export class Rect extends CustomFramework{
+export class Rect extends CustomFramework {
     bannerName: unknown;
     constructor(theBannerName: unknown, theDummyData: unknown) {
         super(theBannerName, theDummyData);
@@ -14,9 +14,6 @@ export class Rect extends CustomFramework{
     }
     color(standardColor: string = 'transparent') {
         console.log(`${this.bannerName} has ${standardColor} color.`);
-        this.greet()
-    }
-    bannerStart() {
-        this.politeInit()
+        //this.greet()
     }
 }

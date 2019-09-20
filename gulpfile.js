@@ -98,6 +98,7 @@ const watchedBrowserify = watchify ( //done
 	.plugin(tsify)
 	.transform('babelify', {
 		"presets": [
+			"@babel/preset-typescript",
 			[
 				"@babel/preset-env",
 				{

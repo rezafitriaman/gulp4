@@ -4,11 +4,19 @@
     ],
     "compilerOptions": {
         "noImplicitAny": true,
+        "esModuleInterop": true,
         "target": "es2015",
+        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "module": "commonjs",
         "removeComments": true,
         "sourceMap": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "declaration": false,
+        "importHelpers": true,
+        "strict": true,
         "types" : ["node"]
     }
 }

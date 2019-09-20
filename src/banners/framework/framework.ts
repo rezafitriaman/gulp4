@@ -1,17 +1,22 @@
 // todo function play pause repeat for the banner
-//      plolite init /onload
+//      polite init /onload
 //      show ads when local or production
-//      dumy data
+//      dummy data
 //      function dynamic font size
 //      dynamic ads (Adform.DynAdsHelper.getVar())
 //      browser check /msieversion crome apple safari
 //      function enabler adform or doubleclic
+
+//import { B300x250 } from "../rect/js/b300x250";
+//import { B250x250 } from "../rect/js/b250x250";
+//import { Rect } from "../rect/js/main";
 
 export class CustomFramework {
     bannerName: unknown;
     politeLoading: unknown;
     develop: boolean;
     dummyData: any;
+    isDevelop: boolean = null;
     constructor(theBannerName: unknown, theDummyData: unknown) {
         // @ts-ignore dhtml comes from adform library
         this.politeLoading = dhtml.getVar('bn', 0);
@@ -36,27 +41,38 @@ export class CustomFramework {
     }
     showAd (_this:any) {
 
-        let banners: NodeList = document.querySelectorAll('.present');
+        let banners: NodeList = document.querySelectorAll('.present #content');
         let spinners: NodeList = document.querySelectorAll('.spinner');
 
-        banners.forEach(banner => (<HTMLElement>banner).style.display = 'block');
-        spinners.forEach(spinner => (<HTMLElement>spinner).style.display = 'block');
+        banners.forEach(banner => (<HTMLElement>banner).style.display = 'flex');
+        spinners.forEach(spinner => (<HTMLElement>spinner).style.display = 'none');
 
+        _this.env(_this)
+    }
+    env(_this:any) {
         //todo make this function right / on develop start or production start
         if(_this.develop) {
-            //let data = _this.dummyData;
+            console.log('banner-start', _this.bannerName);
+            console.log('framework', _this);
 
             // @ts-ignore comes from adform library
-            //Adform.DynAdsHelper.setDemoData(data);
+            Adform.DynAdsHelper.setDemoData(_this.dummyData );
 
-            //this.startAds(data);
-            console.log('framework',_this);
-            console.log('banner start develop');
-            return
+            this.isDevelop = true;
+            (<any>window).env = 'develop';
         }else {
-            console.log('banner start live');
-            return
-            //this.startAds();
+
+            this.isDevelop = false;
+            (<any>window).env = 'live';
+        }
+    }
+    // generic function
+    dynamicFontsize(target:any, parentContainer:any) {
+
+        while(target.offsetWidth > parentContainer.offsetWidth) {
+
+            target.style.fontSize = (parseInt(window.getComputedStyle(target, null).getPropertyValue("font-size")) -1) + 'px';
+
         }
     }
     greet() {
